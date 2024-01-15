@@ -1,0 +1,29 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "demo项目",
+        "title": "接囗文档",
+        "contact": {
+            "name": "demo",
+            "email": "xxxx@126.com"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/getUser": {
+            "get": {
+                "responses": {}
+            }
+        },
+        "/getUserAndRole": {
+            "get": {
+                "responses": {}
+            }
+        },
+        "/hello": {
+            "get": {
+                "responses": {}
+            }
+        }
+    }
+}

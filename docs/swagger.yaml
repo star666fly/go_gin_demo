@@ -1,0 +1,18 @@
+info:
+  contact:
+    email: xxxx@126.com
+    name: demo
+  description: demo项目
+  title: 接囗文档
+  version: "1.0"
+paths:
+  /getUser:
+    get:
+      responses: {}
+  /getUserAndRole:
+    get:
+      responses: {}
+  /hello:
+    get:
+      responses: {}
+swagger: "2.0"
