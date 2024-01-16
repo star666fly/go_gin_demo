@@ -6,13 +6,36 @@ info:
   title: 接囗文档
   version: "1.0"
 paths:
-  /getUser:
-    get:
-      responses: {}
-  /getUserAndRole:
-    get:
-      responses: {}
   /hello:
+    get:
+      responses: {}
+  /redis/getRedis:
+    get:
+      parameters:
+      - description: Key
+        in: query
+        name: key
+        required: true
+        type: string
+      responses: {}
+  /redis/setRedis:
+    get:
+      parameters:
+      - description: key
+        in: query
+        name: key
+        required: true
+        type: string
+      - description: value
+        in: query
+        name: value
+        required: true
+        type: string
+      responses: {}
+  /user/getUser:
+    get:
+      responses: {}
+  /user/getUserAndRole:
     get:
       responses: {}
 swagger: "2.0"

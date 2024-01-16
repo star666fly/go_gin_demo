@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// @Router /getUser [get]
+// @Router /user/getUser [get]
 func GetUser(c *gin.Context) {
 	param := c.Request.FormValue("id")
 	fmt.Println("id:" + param)
@@ -26,7 +26,7 @@ func GetUser(c *gin.Context) {
 	})
 }
 
-// @Router /getUserAndRole [get]
+// @Router /user/getUserAndRole [get]
 func GetUserAndRole(c *gin.Context) {
 	var tx []models.UserRoleVo
 	db := config.DB

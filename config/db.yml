@@ -3,3 +3,8 @@ port: 3306
 username: root
 dbname: demo
 password: password
+
+redis:
+  host: 127.0.0.1:6379
+  db: 0
+  password:

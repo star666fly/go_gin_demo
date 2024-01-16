@@ -18,17 +18,52 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/getUser": {
-            "get": {
-                "responses": {}
-            }
-        },
-        "/getUserAndRole": {
-            "get": {
-                "responses": {}
-            }
-        },
         "/hello": {
+            "get": {
+                "responses": {}
+            }
+        },
+        "/redis/getRedis": {
+            "get": {
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Key",
+                        "name": "key",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/redis/setRedis": {
+            "get": {
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "key",
+                        "name": "key",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "value",
+                        "name": "value",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/user/getUser": {
+            "get": {
+                "responses": {}
+            }
+        },
+        "/user/getUserAndRole": {
             "get": {
                 "responses": {}
             }

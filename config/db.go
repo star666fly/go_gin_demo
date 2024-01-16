@@ -12,8 +12,8 @@ var DB *gorm.DB
 var err error
 
 func init() {
-	var c conf
-	conf := c.getConf()
+	var c Conf
+	conf := c.GetConf()
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		conf.Username,
 		conf.Password,

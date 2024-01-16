@@ -2,6 +2,7 @@ package main
 
 import (
 	_ "go_demo/docs"
+	"go_demo/redis"
 )
 
 // @title			接囗文档
@@ -11,6 +12,10 @@ import (
 // @contact.name	demo
 // @contact.email	xxxx@126.com
 func main() {
+	redis.Setup()
 	r := SetRouter()
-	r.Run(":8081")
+	err := r.Run(":8081")
+	if err != nil {
+		return
+	}
 }

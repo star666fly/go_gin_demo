@@ -8,15 +8,20 @@ import (
 )
 
 func SetRouter() *gin.Engine {
-	r := gin.Default()
-	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	router := gin.Default()
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// 2.绑定路由规则，执行的函数
-	r.GET("/hello", controller.Hello)
+	router.GET("/hello", controller.Hello)
 
-	r.Group("user")
+	user := router.Group("/user")
 	{
-		r.GET("/getUser", controller.GetUser)
-		r.GET("/getUserAndRole", controller.GetUserAndRole)
+		user.GET("/getUser", controller.GetUser)
+		user.GET("/getUserAndRole", controller.GetUserAndRole)
 	}
-	return r
+	redis := router.Group("/redis")
+	{
+		redis.GET("/setRedis", controller.SetRedis)
+		redis.GET("/getRedis", controller.GetRedis)
+	}
+	return router
 }

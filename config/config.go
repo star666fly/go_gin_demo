@@ -6,15 +6,20 @@ import (
 	"os"
 )
 
-type conf struct {
+type Conf struct {
 	Url      string
 	Port     string
 	Username string
 	DbName   string
 	Password string
+	Redis    struct {
+		Host     string
+		Password string
+		DB       int
+	}
 }
 
-func (c *conf) getConf() *conf {
+func (c *Conf) GetConf() *Conf {
 	ymlFile, err := os.ReadFile("config/db.yml")
 	if err != nil {
 		fmt.Println(err.Error())
