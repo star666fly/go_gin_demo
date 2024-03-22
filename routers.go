@@ -20,8 +20,8 @@ func SetRouter() *gin.Engine {
 	}
 	redis := router.Group("/redis")
 	{
-		redis.GET("/setRedis", controller.SetRedis)
-		redis.GET("/getRedis", controller.GetRedis)
+		redis.POST("/setRedis", controller.SetRedis)
+		redis.POST("/getRedis", controller.GetRedis)
 	}
 	return router
 }

@@ -16,11 +16,11 @@
             }
         },
         "/redis/getRedis": {
-            "get": {
+            "post": {
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Key",
+                        "description": "key",
                         "name": "key",
                         "in": "query",
                         "required": true
@@ -30,7 +30,7 @@
             }
         },
         "/redis/setRedis": {
-            "get": {
+            "post": {
                 "parameters": [
                     {
                         "type": "string",

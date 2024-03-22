@@ -8,7 +8,7 @@ import (
 
 var expire = 60
 
-// @Router	/redis/setRedis [get]
+// @Router	/redis/setRedis [post]
 // @Param	key		query	string	true	"key"
 // @Param	value	query	string	true	"value"
 func SetRedis(c *gin.Context) {
@@ -20,8 +20,8 @@ func SetRedis(c *gin.Context) {
 	})
 }
 
-// @Router	/redis/getRedis [get]
-// @Param	key	query	string	true	"Key"
+// @Router	/redis/getRedis [post]
+// @Param	key	query	string	true	"key"
 func GetRedis(c *gin.Context) {
 	key := c.Request.FormValue("key")
 	value := redis.GetRedis(key)

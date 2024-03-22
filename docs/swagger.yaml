@@ -10,16 +10,16 @@ paths:
     get:
       responses: {}
   /redis/getRedis:
-    get:
+    post:
       parameters:
-      - description: Key
+      - description: key
         in: query
         name: key
         required: true
         type: string
       responses: {}
   /redis/setRedis:
-    get:
+    post:
       parameters:
       - description: key
         in: query

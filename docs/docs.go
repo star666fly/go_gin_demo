@@ -24,11 +24,11 @@ const docTemplate = `{
             }
         },
         "/redis/getRedis": {
-            "get": {
+            "post": {
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "Key",
+                        "description": "key",
                         "name": "key",
                         "in": "query",
                         "required": true
@@ -38,7 +38,7 @@ const docTemplate = `{
             }
         },
         "/redis/setRedis": {
-            "get": {
+            "post": {
                 "parameters": [
                     {
                         "type": "string",
